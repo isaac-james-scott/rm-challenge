@@ -1,0 +1,22 @@
+{
+  "name": "rm-challenge",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "dev": "concurrently --kill-others-on-fail \"yarn workspace client dev\" \"yarn workspace server dev\""
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250701.0",
+    "concurrently": "^7.3.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.5.3",
+    "vitest": "^2.1.8",
+    "yarn": "^1.22.19"
+  },
+  "packageManager": "yarn@3.4.1"
+}

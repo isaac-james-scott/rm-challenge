@@ -1,0 +1,2 @@
+# Copy this file to .dev.vars in the same directory and include your API key from https://platform.openelectricity.org.au/sign-in
+OPEN_ELECTRICITY_API_TOKEN=YOUR_API_KEY

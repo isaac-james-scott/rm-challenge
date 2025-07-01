@@ -1,0 +1,3 @@
+name = "rm-challenge-server"
+main = "./src/index.ts"
+compatibility_date = "2025-07-01"
