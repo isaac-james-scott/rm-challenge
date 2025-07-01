@@ -30,3 +30,13 @@ You can find the repository layout as follows:
 - 📂 server
   - src/index.ts <-- Backend entrypoint
 ```
+
+### Frontend
+React + Vite (config found here: `client/vite.config.ts`)
+
+Documentation: https://vite.dev/guide/
+
+### Backend
+Cloudflare workers runtime (config found here: `server/wrangler.toml`)
+
+Documentation: https://developers.cloudflare.com/workers/
