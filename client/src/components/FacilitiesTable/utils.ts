@@ -31,11 +31,18 @@ export const formatLastUpdated = (dateString?: string): string => {
     if (isNaN(date.getTime())) return "N/A";
 
     const now = new Date();
-    const diffInDays = Math.floor(
-      (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
-    );
 
-    if (diffInDays === 0) {
+    const dateOnly = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    );
+    const nowOnly = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    const diffInMs = nowOnly.getTime() - dateOnly.getTime();
+    const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+
+    if (diffInDays <= 0) {
       return "Today";
     } else if (diffInDays === 1) {
       return "Yesterday";
